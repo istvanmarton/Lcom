@@ -1,4 +1,4 @@
-This repository contains an implementation of estimating the $S<sub>max</sub>$ value of a $A$ matrix (i.e., the one-bit classical bound $L1bit$ of a correlation Bell inequality specified by the matrix $A$). The code was used to calculate the numerical results of Section V in the e-print [Beating one bit of communication with and without quantum pseudo-telepathy](https://arxiv.org/abs/2308.10771) by István Márton, Erika Bene, Péter Diviánszky, and Tamás Vértesi.
+This repository contains an implementation of estimating the $$S<sub>max</sub>$$ value of a $A$ matrix (i.e., the one-bit classical bound $L1bit$ of a correlation Bell inequality specified by the matrix $A$). The code was used to calculate the numerical results of Section V in the e-print [Beating one bit of communication with and without quantum pseudo-telepathy](https://arxiv.org/abs/2308.10771) by István Márton, Erika Bene, Péter Diviánszky, and Tamás Vértesi.
 
 
 ## Integer Smax (L1bit) problem
