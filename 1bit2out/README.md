@@ -1,9 +1,9 @@
-This repository contains an implementation of estimating the $S<sub>max</sub>$ value of a *A* matrix (i.e., the one-bit classical bound *L1bit* of a correlation Bell inequality specified by the matrix *A*). The code was used to calculate the numerical results of Section V in the e-print [Beating one bit of communication with and without quantum pseudo-telepathy](https://arxiv.org/abs/2308.10771) by István Márton, Erika Bene, Péter Diviánszky, and Tamás Vértesi.
+This repository contains an implementation of estimating the S<sub>max</sub> value of a *A* matrix (i.e., the one-bit classical bound *L1bit* of a correlation Bell inequality specified by the matrix *A*). The code was used to calculate the numerical results of Section V in the e-print [Beating one bit of communication with and without quantum pseudo-telepathy](https://arxiv.org/abs/2308.10771) by István Márton, Erika Bene, Péter Diviánszky, and Tamás Vértesi.
 
 
 ## Integer Smax (L1bit) problem
 
-Let *A* be an *m\times n* matrix of integer values. The goal is to compute the one-bit classical bound (L1bit) for correlation type Bell inequalities, where *A* is the matrix of coefficients of the correlation Bell expression. The program computes Smax, i.e., the maximal value of the sum of the two *L<sub>1</sub>* values of the two matrices derived from the original *A* matrix, where the two matrices correspond to arbitrary bipartitions by rows of the matrix *A*.
+Let *A* be an $m\times n$ matrix of integer values. The goal is to compute the one-bit classical bound (L1bit) for correlation type Bell inequalities, where *A* is the matrix of coefficients of the correlation Bell expression. The program computes Smax, i.e., the maximal value of the sum of the two *L<sub>1</sub>* values of the two matrices derived from the original *A* matrix, where the two matrices correspond to arbitrary bipartitions by rows of the matrix *A*.
 
 The code is written in Matlab (Smax_Matlab.m) and Octave (Smax_Octave.m) programming languages. The code uses the 'kmn-programming' program (https://github.com/divipp/kmn-programming) and therefore before usage, it must be installed into your working directory. The 'kmn-programming' and therefore the 'Smax_Matlab.m' and 'Smax_Octave.m' work on Linux environment.
 
