@@ -228,8 +228,8 @@ compute depth order guess tr f = do
       m' = (map . map) V.fromList $ takes rs bs''
   if bs' /= (map . map) fromIntegral bs'' then error "overflow happend"
   else do
-    let s = sum $ concat bs'
-    when (s /= fromIntegral (fromIntegral s :: Int)) $ putStr "### WARNING: overflow may happen"
+    let s = sum . map (maximum . concat) . concat . map (takes rs) . transpose . map (takes cs) $ bs'
+    when (8{-TODO-}*s >= fromIntegral (maxBound :: Int)) $ putStrLn "\n!!! WARNING !!!\n    overflow may happen\n"
 
     (i_, w_) <- l2 cs (fromMaybe (length m' `div` 4) depth) order guess m'
     let
