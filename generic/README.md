@@ -154,27 +154,63 @@ The input file may or may not contain vertical and/or horizontal bars.
 
 Example usages:
 
-    $ lkbit print matrices/pironio3.mat 
-    -1  0  0 |  1 0
-     0  0  0 |  0 0
-    ---------+-----
-     0 -1  0 |  0 0
-     0  0  0 | -1 0
-    ---------+-----
-     0  0 -1 |  0 0
-     0  0  0 | -1 0
+-   `lkbit print` with no options just pretty prints the matrix:
 
+        $ lkbit print matrices/pironio3.mat 
+        -1  0  0 |  1 0
+         0  0  0 |  0 0
+        ---------+-----
+         0 -1  0 |  0 0
+         0  0  0 | -1 0
+        ---------+-----
+         0  0 -1 |  0 0
+         0  0  0 | -1 0
 
-    $ lkbit print --rows 3,1,2 --columns 2,3 matrices/pironio3.mat 
-    -1  0 |  0  1 0
-     0  0 |  0  0 0
-     0 -1 |  0  0 0
-    ------+--------
-     0  0 |  0 -1 0
-    ------+--------
-     0  0 | -1  0 0
-     0  0 |  0 -1 0
+    A border can also printed with the `--border` flag:
 
+        $ lkbit print --border matrices/pironio3.mat 
+        +----------+------+
+        | -1  0  0 |  1 0 |
+        |  0  0  0 |  0 0 |
+        +----------+------+
+        |  0 -1  0 |  0 0 |
+        |  0  0  0 | -1 0 |
+        +----------+------+
+        |  0  0 -1 |  0 0 |
+        |  0  0  0 | -1 0 |
+        +----------+------+
+
+    There are other styling options too.
+    For a full list, enter `lkbit print --help`.
+
+-   The `--rows` and `--columns` options updates the vertical and the horizontal the block partitions, respectively:
+
+        $ lkbit print --rows 3,1,2 --columns 2,3 matrices/pironio3.mat 
+        -1  0 |  0  1 0
+         0  0 |  0  0 0
+         0 -1 |  0  0 0
+        ------+--------
+         0  0 |  0 -1 0
+        ------+--------
+         0  0 | -1  0 0
+         0  0 |  0 -1 0
+
+    The integer lists after `--rows` and `--columns` are repeated infinitely.
+    For example, `--rows 1,2` is the same as `--rows 1,2,1,2,1,2,1,2,1,2,1,2`,
+    and `--rows 1` is the same as `--rows 1,1,1,1,1,1,1,1,1,1,1`:
+
+        $ lkbit print --rows 1 matrices/pironio3.mat
+        -1  0  0 |  1 0
+        ---------+-----
+         0  0  0 |  0 0
+        ---------+-----
+         0 -1  0 |  0 0
+        ---------+-----
+         0  0  0 | -1 0
+        ---------+-----
+         0  0 -1 |  0 0
+        ---------+-----
+         0  0  0 | -1 0
 
 
 # Limitations
