@@ -5,7 +5,7 @@ This repository contains an implementation of estimating the *S<sub>max</sub>* v
 
 Let *A* be an $m\times n$ matrix of integer values. The goal is to compute the one-bit classical bound (L1bit) for correlation type Bell inequalities, where *A* is the matrix of coefficients of the correlation Bell expression. The program computes *S<sub>max</sub>*, i.e., the maximal value of the sum of the two *L<sub>1</sub>* values of the two matrices derived from the original *A* matrix, where the two matrices correspond to arbitrary bipartitions by rows of the matrix *A*.
 
-The code is written in Matlab (Smax_Matlab.m) and Octave (Smax_Octave.m) programming languages. The code uses the 'kmn-programming' program (https://github.com/divipp/kmn-programming) and therefore before usage, it must be installed into your working directory. The 'kmn-programming' and therefore the 'Smax_Matlab.m' and 'Smax_Octave.m' work on Linux environment.
+The code is written in Matlab (Smax_Matlab.m) and Octave (Smax_Octave.m) programming languages. The code uses the 'kmn-programming' program (https://github.com/istvanmarton/kmn-programming) and therefore before usage, it must be installed into your working directory. The 'kmn-programming' and therefore the 'Smax_Matlab.m' and 'Smax_Octave.m' work on Linux environment.
 
 ## Usage
 
