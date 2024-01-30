@@ -44,4 +44,23 @@ Q=trace(EQ*M');
 disp(Q)
 %567*2
 
-dlmwrite('E1bit_90.txt', E1bit, ' ')
+[rows, cols] = size(E1bit);
+E1bit_mod = [];
+
+for i = 1:rows
+	if(partition(i) == 0)
+		for j = 1:cols
+			if(E1bit(i,j) == -1) E1bit_mod(i,j) = -1;
+			else E1bit_mod(i,j) = 1;
+			end
+		end
+	else
+		for j = 1:cols
+			if(E1bit(i,j) == -1) E1bit_mod(i,j) = 0;
+			else E1bit_mod(i,j) = 2;
+			end
+		end
+	end
+end
+
+dlmwrite('E1bit_90.txt', E1bit_mod, ' ')
