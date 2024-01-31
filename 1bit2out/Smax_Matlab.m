@@ -58,8 +58,8 @@ S_max_next = L11 + L12;
 if(S_max_next > S_max)
 	S_max = S_max_next;
 	s = int2str(partition - 1);
-	printf('S_max = %d, L11 = %d, L12 = %d\n%s\n', S_max, L11, L12, s);
-	fprintf(fid,'S_max = %d, L11 = %d, L12 = %d\n%s\n', S_max, L11, L12, s);
+	printf('S_max = %d, L10 = %d, L11 = %d\n%s\n', S_max, L11, L12, s);
+	fprintf(fid,'S_max = %d, L10 = %d, L11 = %d\n%s\n', S_max, L11, L12, s);
 end
 
 do
@@ -108,11 +108,10 @@ S_max_next = L11 + L12;
 if(S_max_next > S_max)
 	S_max = S_max_next;
 	s = int2str(partition - 1);
-	printf('S_max = %d, L11 = %d, L12 = %d\n%s\n', S_max, L11, L12, s);
-	fprintf(fid,'S_max = %d, L11 = %d, L12 = %d\n%s\n', S_max, L11, L12, s);
+	printf('S_max = %d, L10 = %d, L11 = %d\n%s\n', S_max, L11, L12, s);
+	fprintf(fid,'S_max = %d, L10 = %d, L11 = %d\n%s\n', S_max, L11, L12, s);
 end
-%S_max_next
-%S_max_local
+
 until(S_max_local == S_max_next)
 
 counter = counter+1;
