@@ -21,9 +21,7 @@ S_max = 0;
 counter = 0;
 while((x==1) || (counter < counter_max))
 partition = randi(2,1,size(A)(1));
-part_1 = sum(partition==1);
-part_2 = sum(partition==2);
-%if((part_1 < 48) && (part_2 < 48))
+
 A1=A(partition==1,:);
 A2=A(partition==2,:);
 
@@ -55,7 +53,7 @@ S_max_next = L11 + L12;
 %S_max_next = sum(abs(h1*A1)) + sum(abs(h2*A2));
 if(S_max_next > S_max)
 	S_max = S_max_next;
-	s = int2str(partition);
+	s = int2str(partition - 1);
 	printf("S_max = %d, L11 = %d, L12 = %d\n%s\n", S_max, L11, L12, s);
 	fprintf(fid,"S_max = %d, L11 = %d, L12 = %d\n%s\n", S_max, L11, L12, s);
 end
@@ -77,8 +75,7 @@ for i = 1:size(A)(1)
 	s=s+max(s1i,s2i);
 end
 partition = p';
-part_1 = sum(partition==1);
-part_2 = sum(partition==2);
+
 A1=A(partition==1,:);
 A2=A(partition==2,:);
 
@@ -109,14 +106,14 @@ L12 = str2num(L12_str);
 S_max_next = L11 + L12;
 if(S_max_next > S_max)
 	S_max = S_max_next;
-	s = int2str(partition);
+	s = int2str(partition - 1);
 	printf("S_max = %d, L11 = %d, L12 = %d\n%s\n", S_max, L11, L12, s);
 	fprintf(fid,"S_max = %d, L11 = %d, L12 = %d\n%s\n", S_max, L11, L12, s);
 end
 %S_max_next
 %S_max_local
 until(S_max_local == S_max_next)
-%counter
+
 counter = counter+1;
 end
 fclose(fid);
