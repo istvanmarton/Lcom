@@ -3,6 +3,7 @@ strategy0 = load('S63_0.txt')
 strategy1 = load('S63_1.txt')
 partition = load('P63.txt')
 
+[nrows, ncols] = size(M);
 M0 = M(partition==0,:);
 M1 = M(partition==1,:);
 
@@ -20,7 +21,7 @@ E1bit = zeros(63,63);
 strategyA = zeros(63,1);
 step0 = 0;
 step1 = 0;
-for i=1:63
+for i=1:nrows
     if partition(i)==0,
         step0 = step0 + 1;
         a=strategy0(step0);
@@ -44,10 +45,9 @@ Q=trace(EQ*M');
 disp(Q)
 %1134
 
-[rows, cols] = size(E1bit);
 E1bit_mod = [];
 
-for i = 1:rows
+for i = 1:nrows
 	if(partition(i) == 0)
 		for j = 1:cols
 			if(E1bit(i,j) == -1) E1bit_mod(i,j) = -1;
