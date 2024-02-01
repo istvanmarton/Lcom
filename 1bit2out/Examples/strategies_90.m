@@ -2,6 +2,7 @@ M=load('W90.txt');
 strategy0=load('S90_0.txt')
 strategy1=load('S90_1.txt')
 partition = load('P90.txt')
+[nrows, ncols] = size(M);
 
 M0=M(partition==0,:);
 M1=M(partition==1,:);
@@ -14,13 +15,13 @@ S_max = L1_0 + L1_1
 strategyB0 = sign(strategy0'*M0+0.0001);
 strategyB1 = sign(strategy1'*M1+0.0001);
 
-E1bit = zeros(90,90);
+E1bit = zeros(nrows,ncols);
 
 % compute strategy A
-strategyA = zeros(90,1);
+strategyA = zeros(nrows,1);
 step0 = 0;
 step1 = 0;
-for i=1:90
+for i=1:nrows
     if partition(i)==0,
         step0 = step0 + 1;
         a=strategy0(step0);
@@ -44,18 +45,17 @@ Q=trace(EQ*M');
 disp(Q)
 %567*2
 
-[rows, cols] = size(E1bit);
 E1bit_mod = [];
 
-for i = 1:rows
+for i = 1:nrows
 	if(partition(i) == 0)
-		for j = 1:cols
+		for j = 1:ncols
 			if(E1bit(i,j) == -1) E1bit_mod(i,j) = -1;
 			else E1bit_mod(i,j) = 1;
 			end
 		end
 	else
-		for j = 1:cols
+		for j = 1:ncols
 			if(E1bit(i,j) == -1) E1bit_mod(i,j) = 0;
 			else E1bit_mod(i,j) = 2;
 			end
