@@ -2,3 +2,5 @@
 'P63.txt' and 'P90.txt' are files consisting of the partition of the previously mentioned matrices respectively to maximize the sum of $L_1$ values of the two partitioned matrices respectively.
 The 'S63_0.txt', 'S63_1.txt', 'S90_0.txt', 'S90_1.txt' are strategy vectors belonging to the partitioned matrices.
 The 'check.m' is a Matlab script with the input of the previously mentioned matrices and vectors that calculates the best $S_{max}$ value found by us.
+The 'strategies_63.m' and 'strategies_90.m' files are scripts that generate the 'E1bit_63.txt' and 'E1bit_90.txt' files respectively from the original matrices, partitions, and strategies.
+The 'oneBit.gnu' Gnuplot script plots the 'W' matrices on the left and the 'E1bit' matrices on the right.
