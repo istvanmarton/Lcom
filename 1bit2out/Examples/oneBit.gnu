@@ -20,7 +20,7 @@ ytics_offset_y = 0
 p0 = "Bold Bold, 42"
 p1 = "Bold Bold, 60"
 set term eps size 28, 28
-set out 'oneBit_all.eps'
+set out 'oneBit.eps'
 
 set size ratio 1/1
 set border linewidth 10
