@@ -24,5 +24,5 @@ The L1bit.cu is the CUDA code calculating the *S<sub>max</sub>* of a matrix. The
 command and can be invoked with the
     ./L1bit filename
 command, where filename is the name of the file containing the matrix. The program partitions the matrix according to the rows and every time it finds a better partition, it writes out the results to the file *Partition_strategy.txt*. In every iteration, the following information is provided:
-  +The *L<sub>1</sub>* values of the two partitioned matrix along with the calculated *S<sub>max</sub>* value.
-  +The corresponding partition. The partition consists of zeros and ones indicating how the original matrix is partitioned into two matrices according to it's rows.
+      +The *L<sub>1</sub>* values of the two partitioned matrix along with the calculated *S<sub>max</sub>* value.
+      +The corresponding partition. The partition consists of zeros and ones indicating how the original matrix is partitioned into two matrices according to it's rows.
